@@ -1,0 +1,91 @@
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "sei_back_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "sei_back_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(584753285416134135)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLessons (20210427194708)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(584753285416134135)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(584753285416134135)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLessons (20210427194708)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(584753285416134135)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(584753285416134135)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLessons (20210427194708)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (157.1ms)[0m  [1m[35mCREATE TABLE "lessons" ("id" bigserial primary key, "title" character varying, "subject" character varying, "unit" character varying, "videoLink" character varying, "markdownLink" character varying, "resourceLinks" character varying[] DEFAULT '{}', "tags" character varying[] DEFAULT '{}', "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210427194708"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(584753285416134135)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLesson Create (0.8ms)[0m  [1m[32mINSERT INTO "lessons" ("title", "subject", "unit", "videoLink", "markdownLink", "resourceLinks", "tags", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Intro to Javascript"], ["subject", "Frontend Fundamentals"], ["unit", "1"], ["videoLink", "https://generalassembly.zoom.us/rec/play/tMxveLXAkAiLWe2N1c8dgdQI8v3mZxjos4D-_2m-7talBJp3hV4dEaCQz2yLL8i8UKxip5T5JErkkLX6.wiprAij7eGG882w7?startTime=1613570506000&_x_zm_rtaid=YS3DAMxuSgyGINA99kTc3w.1619548800303.14580ad70292b493e82d2b761ea9226e&_x_zm_rhtaid=712"], ["markdownLink", "https://seir-perseverance.netlify.app/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript/"], ["resourceLinks", "{link1,link2}"], ["tags", "{Javascript,Web-Development,Functions}"], ["created_at", "2021-04-27 20:20:57.154091"], ["updated_at", "2021-04-27 20:20:57.154091"]]
+  [1m[36mTRANSACTION (79.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2021-04-27 16:21:41 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/justinanmoreno/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/justinanmoreno/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.9ms | Allocations: 526)
+Completed 200 OK in 22ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 4401)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-04-27 16:21:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/lessons" for 127.0.0.1 at 2021-04-27 16:21:45 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.9ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 14.3ms | ActiveRecord: 4.7ms | Allocations: 7472)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-04-27 16:21:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/lessons" for 127.0.0.1 at 2021-04-27 16:45:51 -0400
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.8ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 4.5ms | Allocations: 3008)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-04-27 16:45:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/lessons" for 127.0.0.1 at 2021-04-27 16:50:15 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LessonsController#index as HTML
+  [1m[36mLesson Load (0.8ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 20.4ms | ActiveRecord: 6.8ms | Allocations: 9550)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2021-04-27 17:29:22 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LessonsController#index as */*
+  [1m[36mLesson Load (0.8ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 17.9ms | ActiveRecord: 5.0ms | Allocations: 9558)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2021-04-27 17:29:27 -0400
+Processing by LessonsController#index as */*
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 888)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2021-04-27 17:31:41 -0400
+Processing by LessonsController#index as */*
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/controllers/lessons_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 5.0ms | Allocations: 6203)
+
+
