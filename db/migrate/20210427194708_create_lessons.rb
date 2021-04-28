@@ -17,4 +17,4 @@ end
 # add_index :lessons, :tags, using "gin"
 #     add_index :lessons, :resourceLinks, using "gin"
 
-#TODO:create user model 
+#TODO:create user model with favorites 
